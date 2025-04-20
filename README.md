@@ -55,9 +55,31 @@ Install all packages listed in the `requirements.txt` file:
 pip install -r requirements.txt
 ```
 
+
 ---
 
-### 🏁 5. Run the Flask App
+### 🛠️ 5. Add Groq API Key
+
+In order to use the Groq model, you need to obtain an API key. Follow these steps:
+
+1. Visit [Groq API](https://www.groq.com/) and sign up for an API key.
+2. Once you have the API key, open the `app.py` file.
+3. Add the API key to the environment variables or directly in the `app.py` file like this:
+
+```python
+
+# Groq API Key (Make sure to keep it secret)
+GROQ_API_KEY = "your-groq-api-key-here"
+
+```
+
+Alternatively, you can use a `.env` file to store sensitive data like the API key securely.
+
+---
+
+---
+
+### 🏁 6. Run the Flask App
 
 Once everything is installed, you can start the Flask app using:
 
@@ -95,3 +117,7 @@ Feel free to fork the project, open issues, or submit pull requests.
 Maintained by [DeepNeuralAI](https://github.com/DeepNeuralAI313)
 
 ---
+
+
+
+
