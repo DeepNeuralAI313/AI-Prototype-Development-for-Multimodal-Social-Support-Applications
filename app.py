@@ -73,7 +73,7 @@ def image_and_entered_id_verification(user_id, image_file):
         tuple: (bool verification status, dict user data if verified)
     """
     # Step 1: Check if ID exists in database
-    df = pd.read_csv('saudi_applicants.csv')
+    df = pd.read_csv('data.csv')
     if user_id not in df['Emirates_ID'].astype(str).values:
         return False, {}
 
