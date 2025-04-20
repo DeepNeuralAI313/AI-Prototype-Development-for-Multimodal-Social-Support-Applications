@@ -13,7 +13,7 @@ import pickle  # For loading serialized objects
 ocr = PaddleOCR(use_angle_cls=True, lang='en')
 
 # Initialize Groq client with API key
-client = Groq(api_key="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")
+client = Groq(api_key="-------Enter your API Key------")  # Enter Groq API KEY
 
 # Import TensorFlow model loading function
 from tensorflow.keras.models import load_model
