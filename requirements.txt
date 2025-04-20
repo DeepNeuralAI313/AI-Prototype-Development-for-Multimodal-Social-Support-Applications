@@ -1,0 +1,9 @@
+flask 
+pandas 
+groq 
+python-docx 
+pdfplumber 
+tensorflow
+paddlepaddle
+paddleocr
+scikit-learn
