@@ -1,4 +1,4 @@
-```markdown
+
 # 🧠 AI Prototype Development for Multimodal Social Support Applications
 
 This repository contains a complete Flask-based AI prototype application developed for multimodal social support. It includes all relevant source code, dependencies, and setup instructions.
@@ -17,6 +17,7 @@ Open your terminal or Git Bash and run:
 
 ```bash
 git clone https://github.com/DeepNeuralAI313/AI-Prototype-Development-for-Multimodal-Social-Support-Applications.git
+ 
 cd AI-Prototype-Development-for-Multimodal-Social-Support-Applications
 ```
 
