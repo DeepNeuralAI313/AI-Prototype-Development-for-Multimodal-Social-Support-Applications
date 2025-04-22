@@ -1,3 +1,103 @@
+# import csv
+# import random
+# from faker import Faker
+
+# # Use Arabic locale for Saudi Arabia
+# fake = Faker('ar_SA')
+
+# def generate_emirates_id():
+#     return f"784-{random.randint(1970, 2000)}-{random.randint(1000000, 9999999)}-{random.randint(0,9)}"
+
+# def generate_applicant():
+#     employment_statuses = ['موظف', 'عاطل عن العمل', 'عمل حر', 'دوام جزئي', 'متعاقد', 'متقاعد']
+#     education_levels = ['الثانوية العامة', 'بكالوريوس', 'ماجستير', 'دكتوراه']
+#     regions = ['الرياض', 'جدة', 'مكة', 'الدمام', 'المدينة المنورة', 'تبوك', 'أبها', 'القصيم']
+
+#     name = fake.name()
+#     emirates_id = generate_emirates_id()
+#     age = random.randint(25, 60)
+#     gender = random.choice(['ذكر', 'أنثى'])
+#     income = random.randint(2000, 20000)
+#     dependents = random.randint(0, 6)
+#     employment_status = random.choice(employment_statuses)
+#     education = random.choice(education_levels)
+#     previous_assistance = random.choice(['نعم', 'لا'])
+#     credit_score = random.randint(500, 750)
+#     region = random.choice(regions)
+
+#     return [name, emirates_id, age, gender, income, dependents, employment_status, education, previous_assistance, credit_score, region]
+
+# def generate_csv(filename='saudi_applicants.csv', num_records=50):
+#     headers = ["الاسم", "رقم الهوية", "العمر", "الجنس", "الدخل", "المعالين", 
+#                "الحالة الوظيفية", "المستوى التعليمي", "مساعدة سابقة", 
+#                "درجة الائتمان", "المنطقة"]
+    
+#     with open(filename, mode='w', newline='', encoding='utf-8') as file:
+#         writer = csv.writer(file)
+#         writer.writerow(headers)
+#         for _ in range(num_records):
+#             writer.writerow(generate_applicant())
+    
+#     print(f"{num_records} سجلًا تم حفظها في '{filename}'")
+
+# # Run function
+# generate_csv('saudi_applicants.csv', num_records=50)
+
+# import random
+# import pandas as pd
+
+# # UAE-style Arabic names (sampled for realism)
+# arabic_names = [
+#     "Ahmed Al Mansoori", "Fatima Al Zaabi", "Mohammed Al Hammadi", "Aisha Al Shamsi",
+#     "Hamad Al Suwaidi", "Mariam Al Nuaimi", "Khalid Al Ameri", "Noora Al Mazrouei",
+#     "Saeed Al Marri", "Latifa Al Rumaithi", "Abdullah Al Ali", "Hind Al Hosani",
+#     "Yousef Al Ketbi", "Salma Al Mehairi", "Omar Al Darei", "Reem Al Shamsi",
+#     "Majid Al Falasi", "Layla Al Tunaiji", "Rashid Al Qubaisi", "Amna Al Shehhi",
+#     "Nasser Al Kaabi", "Shaikha Al Shamsi", "Fahad Al Muhairi", "Wafa Al Shamsi",
+#     "Sultan Al Nuaimi", "Maha Al Hammadi", "Essa Al Mazrouei", "Nouf Al Suwaidi",
+#     "Tariq Al Shamsi", "Dana Al Mansoori"
+# ]
+
+
+# employment_statuses = ['موظف', 'عاطل عن العمل', 'عمل حر', 'دوام جزئي', 'متعاقد', 'متقاعد']
+# education_levels = ['الثانوية العامة', 'بكالوريوس', 'ماجستير', 'دكتوراه']
+# regions = ['أم القيوين', 'رأس الخيمة', 'الفجيرة', 'دبي', 'الشارقة', 'أبوظبي']
+
+# genders = ['ذكر', 'أنثى']
+# assistance = ['نعم', 'لا']
+
+# # Function to generate Emirates ID and age
+# def generate_emirates_id_and_age():
+#     birth_year = random.randint(1985, 1995)
+#     age = 2025 - birth_year
+#     emirates_id = f"784-{birth_year}-{random.randint(1000000, 9999999)}-{random.randint(1,9)}"
+#     return emirates_id, age
+
+# # Generate data
+# data = []
+# for name in arabic_names[:30]:
+#     emirates_id, age = generate_emirates_id_and_age()
+#     gender = 'ذكر' if 'Ahmed' in name or 'Mohammed' in name or 'Hamad' in name or 'Khalid' in name or 'Saeed' in name or 'Abdullah' in name or 'Yousef' in name or 'Omar' in name or 'Majid' in name or 'Rashid' in name or 'Nasser' in name or 'Fahad' in name or 'Sultan' in name or 'Essa' in name or 'Tariq' in name else 'أنثى'
+#     income = random.randint(4000, 30000)
+#     row = {
+#         "Name": name,
+#         "Emirates_ID": emirates_id,
+#         "Age": age,
+#         "Gender": gender,
+#         "Income": income,
+#         "Dependents": random.randint(0, 5),
+#         "Employment_Status": random.choice(employment_statuses),
+#         "Education_Level": random.choice(education_levels),
+#         "Previous_Assistance": random.choice(assistance),
+#         "Credit_Score": random.randint(550, 800),
+#         "Region": random.choice(regions)
+#     }
+#     data.append(row)
+
+# df_uae = pd.DataFrame(data)
+# df_uae.to_csv('data.csv')
+
+
 # Re-import necessary modules after kernel reset
 import random
 import pandas as pd
